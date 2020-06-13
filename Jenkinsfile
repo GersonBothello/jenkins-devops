@@ -23,10 +23,10 @@ pipeline {
 				echo("build")
 			}
 		}
-		post{
+	}
+	post{
 			always{
 				echo("I am done")
 			}
 		}
-	}
 }
