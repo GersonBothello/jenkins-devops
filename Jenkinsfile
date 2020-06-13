@@ -17,13 +17,14 @@ pipeline {
 	
 
 	stages {
-		stage ('Checkout')
+		stage ('Checkout'){
 			steps{
 				sh 'docker version'
 				sh 'mvn --version' 
 				//echo("build")
 				echo("path - $PATH")
 			}
+		}
 		stage ('Compile') {
 			steps{
 				sh 'mvn clean compile' 
