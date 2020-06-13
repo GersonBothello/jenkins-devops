@@ -7,10 +7,19 @@ node {
 //Declarative
 pipeline {
 	agent any
+
+	/* 
+	environment {
+		dockerHome = tool "myDocker"
+		mavenHome = tool "myMaven"
+	}
+	*/
+
 	stages {
 		stage ('Build') {
 			steps{
-				echo("build")
+				//echo("build")
+				echo("path - $PATH")
 			}
 		}
 		stage ('Test') {
