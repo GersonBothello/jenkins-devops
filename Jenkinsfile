@@ -8,12 +8,13 @@ node {
 pipeline {
 	agent any
 
-	/* 
+	
 	environment {
 		dockerHome = tool "myDocker"
 		mavenHome = tool "myMaven"
+		PATH="$dockerHome/bin:$mavenHome/bin"
 	}
-	*/
+	
 
 	stages {
 		stage ('Build') {
